@@ -5,7 +5,7 @@ import { authenticateUser } from "../../middlewares/authMiddleware";
 const router = Router();
 
 router.post("/", authenticateUser, ProjectController.createProject);
-router.get("/", authenticateUser, ProjectController.getProjects);
+router.get("/", authenticateUser, ProjectController.getProjectswithPagination);
 router.put("/:id", authenticateUser, ProjectController.updateProject);
 router.delete("/:id", authenticateUser, ProjectController.deleteProject);
 

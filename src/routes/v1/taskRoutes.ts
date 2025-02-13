@@ -7,6 +7,7 @@ const router = Router();
 
 router.post("/", authenticateUser, TaskController.createTask);
 router.get("/:projectId", authenticateUser, TaskController.getTaskByProjectId);
+router.get("/", authenticateUser, TaskController.getTaskByFilters);
 router.put("/:id", authenticateUser, TaskController.updateTask);
 router.delete("/:id", authenticateUser, TaskController.deleteTask);
 
